@@ -24,6 +24,49 @@
       padding: 0 24px;
     }
 
+    /* ===== FIXED BACK BUTTON — top-right corner ===== */
+    .back-btn {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #0a0a0a;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 60px;
+      padding: 0.7rem 1.8rem 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+    }
+
+    .back-btn i {
+      font-size: 1rem;
+      color: #ffffff;
+      transition: transform 0.15s ease;
+    }
+
+    .back-btn:hover {
+      background: #1e293b;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .back-btn:hover i {
+      transform: translateX(-3px);
+    }
+
+    .back-btn:active {
+      transform: scale(0.98);
+    }
+
     /* header – artistic unity palette */
     .mini-header {
       background: #000000;
@@ -335,6 +378,12 @@
         margin-left: 0;
         font-size: 0.8rem;
       }
+      .back-btn {
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.85rem;
+        padding: 0.55rem 1.3rem 0.55rem 1.1rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -372,6 +421,13 @@
   </style>
 </head>
 <body>
+
+  <!-- ===== FIXED BACK BUTTON (top-right) ===== 
+       Replace the href below with your own website URL.
+  -->
+  <a href="https://your-website.com" class="back-btn" id="backButton">
+    <i class="fas fa-arrow-left"></i> Back
+  </a>
 
   <!-- header -->
   <header class="mini-header">
@@ -499,7 +555,6 @@
         </ul>
       </div>
     </div>
-    <!-- cta strip removed -->
   </div>
 
   <!-- footer -->
